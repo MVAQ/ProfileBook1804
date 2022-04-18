@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProfileBook1804.Views.AddContactView">
+    <StackLayout>
+
+        <Frame BackgroundColor="#2196F3" Padding="1" CornerRadius="0">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Button Text="B" Grid.Column="3"/>
+                <Button Text="S" Grid.Column="2"/>
+                <Label FontSize="20" 
+                       Text="Main list"
+                       Grid.Column="1"
+                       Padding="5"
+                       HorizontalOptions="Center"/>
+            </Grid>
+
+        </Frame>
+
+        <Grid Padding="30, 50, 30, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                
+                
+            </Grid.RowDefinitions>
+            <Frame Grid.RowSpan="3">
+            <Image Source="ProfileBook1804\ProfileBook1804.Android\Resources\mipmap-hdpi\icon.png"
+                   Grid.Column="0"
+                   />
+            </Frame>
+            <Label Text="Sergio" 
+                   FontSize="13"
+                   Grid.Row="0"
+                   Grid.Column="1"/>
+
+            <Label Text="Sergey Prokopenko"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   FontSize="13"/>
+
+            <Label Text="9/05/1986 7:45PM"
+                   FontSize="13"
+                   Grid.Row="2"
+                   Grid.Column="1"/>
+
+            
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>

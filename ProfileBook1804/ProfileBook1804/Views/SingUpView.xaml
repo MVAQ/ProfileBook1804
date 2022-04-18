@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProfileBook1804.Views.SingUpView">
+
+    <StackLayout>
+        
+        <Frame BackgroundColor="#2196F3" Padding="1" CornerRadius="0">
+            
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Button Text="a" Grid.Row="0"  Grid.Column="0"/>
+                
+                <Label FontSize="20" 
+                       Text="User sing up Profile Book"
+                       Grid.Column="1"
+                       Padding="5"
+                       HorizontalOptions="Center"/>
+            </Grid>
+            
+        </Frame>
+
+        <Grid Padding="30, 50, 30, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Entry Placeholder="Login"
+                   Grid.Row="1"/>
+
+            <Entry Placeholder="Password" 
+                   Grid.Row="2"/>
+
+            <Entry Placeholder="Password Confirm" 
+                   Grid.Row="3"/>
+
+            <Button Grid.Row="9"   
+                    BackgroundColor ="Goldenrod" 
+                    Text="Sing in" 
+                    FontSize="Medium"/>
+        </Grid>
+        
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProfileBook1804.Views.SingInView">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="14" CornerRadius="0">
+            <Label FontSize="30" Text="User sing in Profile Book"/>
+        </Frame>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Entry Placeholder="Login"
+                   Grid.Row="1" />
+            
+            <Entry Placeholder="Password" 
+                 
+                   Grid.Row="2" 
+                   VerticalOptions="Start"/>
+            
+            <Button Grid.Row="3" 
+                    BackgroundColor ="Goldenrod" 
+                    Text="Sing in" 
+                    FontSize="Medium"
+                    HeightRequest="50" 
+                    WidthRequest="50"/>
+            
+            <Label Text="Sing Up" 
+                   FontSize="18"   
+                   TextColor="Blue" 
+                   Grid.Row="4" 
+                   HorizontalOptions="Center"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
