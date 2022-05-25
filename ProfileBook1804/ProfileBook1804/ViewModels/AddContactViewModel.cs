@@ -13,11 +13,11 @@ namespace ProfileBook1804.ViewModels
         private  IRepository _reposytory;
         private  ISettingsManager _settingsManager;
         private  ProfileManager _profileManager;
-
+        private INavigationService _navigationService;
         public AddContactViewModel(IRepository _reposytory, 
                                    ISettingsManager _settingsManager, 
                                    ProfileManager _profileManager, 
-                                   INavigationService navigationService)
+                                   INavigationService navigationService) : base(navigationService)
         {
             _reposytory = new Repository();
             _settingsManager = new SettingsManager();
