@@ -1,4 +1,5 @@
-﻿using ProfileBook1804.Models;
+﻿using Prism.Navigation;
+using ProfileBook1804.Models;
 using ProfileBook1804.Services.Managers;
 using ProfileBook1804.Services.Repositorys;
 using ProfileBook1804.Services.Settings;
@@ -7,24 +8,26 @@ using System.Collections.ObjectModel;
 
 namespace ProfileBook1804.ViewModels
 {
-    public partial class MainListViewModel
+    public partial class MainListViewModel : ViewModelBase
     {
-        public IRepository _repository;
-        public ISettingsManager _settingsManager;
-        public IProfileManager _profileManager;
+        //   public IRepository _repository;
+        //  public ISettingsManager _settingsManager;
+        // public IProfileManager _profileManager;
 
-        private readonly ObservableCollection<ContactModel> _contactList;
+        // private readonly ObservableCollection<ContactModel> _contactList;
 
-        public MainListViewModel(IRepository repository, ISettingsManager settingsManager, IProfileManager profileManager)
+        // public MainListViewModel(IRepository repository, ISettingsManager settingsManager, IProfileManager profileManager)
+        // {
+        //   _repository = repository;
+        // _settingsManager = settingsManager;
+        // _profileManager = profileManager;
+        // _contactList = new ObservableCollection<ContactModel>();
+
+
+
+        //}
+        public MainListViewModel(INavigationService navigationService) : base(navigationService)
         {
-            _repository = repository;
-            _settingsManager = settingsManager;
-            _profileManager = profileManager;
-            _contactList = new ObservableCollection<ContactModel>();
-
-
-
         }
-
     }
 }

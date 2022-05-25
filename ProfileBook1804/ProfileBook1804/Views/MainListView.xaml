@@ -2,10 +2,40 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProfileBook1804.Views.MainListView">
+
     <StackLayout>
+        <Grid Padding="30, 50, 30, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
 
-        <Entry Text="WWWWWWWWWWWWWWWWWWWWWWWW"/>
 
+            </Grid.RowDefinitions>
+            <Frame Grid.RowSpan="3">
+                <Image Source="ProfileBook1804\ProfileBook1804.Android\Resources\mipmap-hdpi\icon.png"
+                                     Grid.Column="0"
+                                       />
+            </Frame>
+            <Label Text="Sergio" 
+                                 FontSize="13"
+                                 Grid.Row="0"
+                                 Grid.Column="1"/>
+
+            <Label Text="Sergey Prokopenko"
+                                 Grid.Row="1"
+                                 Grid.Column="1"
+                                 FontSize="13"/>
+
+            <Label Text="9/05/1986 7:45PM"
+                                 FontSize="13"
+                                 Grid.Row="2"
+                                 Grid.Column="1"/>
+        </Grid>
     </StackLayout>
-
 </ContentPage>

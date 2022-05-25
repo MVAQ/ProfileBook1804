@@ -19,10 +19,10 @@ namespace ProfileBook1804
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"{nameof(ProfileBook1804.Views.AddContactView)}");
+            NavigationService.NavigateAsync($"{nameof(ProfileBook1804.Views.MainListView)}");
         }
   
-
+        
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterInstance<ISettingsManager>(Container.Resolve<SettingsManager>());
