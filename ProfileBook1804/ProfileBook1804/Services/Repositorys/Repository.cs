@@ -16,17 +16,20 @@ namespace ProfileBook1804.Services.Repositorys
 
         public Repository ()
         {
-            _database = new Lazy<SQLiteAsyncConnection>(() =>
+             
+
+             _database = new Lazy<SQLiteAsyncConnection>(() =>
             {
                 var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "_profileBook.db3");
                 var database = new SQLiteAsyncConnection(path);
 
                 database.CreateTableAsync<ContactModel>();
+                database.CreateTableAsync<UserModel>();
 
                 return database;
             });
         }
-
+        
         public async Task<List<T>> GetAllAsync<T>() where T : IEntityBase, new()
         {
             return await _database.Value.Table<T>().ToListAsync();

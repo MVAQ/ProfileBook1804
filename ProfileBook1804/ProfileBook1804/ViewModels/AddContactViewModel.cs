@@ -10,18 +10,16 @@ namespace ProfileBook1804.ViewModels
 {
     public class AddContactViewModel : ViewModelBase
     {
-        private  IRepository _reposytory;
+       
         private  ISettingsManager _settingsManager;
-        private  ProfileManager _profileManager;
+        private  IProfileManager _profileManager;
         private INavigationService _navigationService;
-        public AddContactViewModel(IRepository _reposytory, 
-                                   ISettingsManager _settingsManager, 
-                                   ProfileManager _profileManager, 
+        public AddContactViewModel(ISettingsManager settingsManager, 
+                                   ProfileManager profileManager, 
                                    INavigationService navigationService) : base(navigationService)
         {
-            _reposytory = new Repository();
-            _settingsManager = new SettingsManager();
-            _profileManager = new ProfileManager();
+            _settingsManager = settingsManager;
+            _profileManager = profileManager;
            
         }
 

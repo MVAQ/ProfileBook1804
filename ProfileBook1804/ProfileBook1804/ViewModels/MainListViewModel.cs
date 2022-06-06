@@ -10,24 +10,23 @@ namespace ProfileBook1804.ViewModels
 {
     public partial class MainListViewModel : ViewModelBase
     {
-        //   public IRepository _repository;
-        //  public ISettingsManager _settingsManager;
-        // public IProfileManager _profileManager;
+          public IRepository _repository;
+          public ISettingsManager _settingsManager;
+          public IProfileManager _profileManager;
 
-        // private readonly ObservableCollection<ContactModel> _contactList;
+         private readonly ObservableCollection<ContactModel> _contactList;
 
-        // public MainListViewModel(IRepository repository, ISettingsManager settingsManager, IProfileManager profileManager)
-        // {
-        //   _repository = repository;
-        // _settingsManager = settingsManager;
-        // _profileManager = profileManager;
-        // _contactList = new ObservableCollection<ContactModel>();
-
-
-
-        //}
-        public MainListViewModel(INavigationService navigationService) : base(navigationService)
+        public MainListViewModel(IRepository repository, ISettingsManager settingsManager, IProfileManager profileManager, INavigationService navigationService) : base(navigationService)
         {
+            _repository = repository;
+            _settingsManager = settingsManager;
+            _profileManager = profileManager;
+            _contactList = new ObservableCollection<ContactModel>();
+
+
+
         }
+        
+        
     }
 }

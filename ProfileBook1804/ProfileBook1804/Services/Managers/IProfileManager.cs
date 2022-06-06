@@ -10,7 +10,9 @@ namespace ProfileBook1804.Services.Managers
     public interface IProfileManager
     {
         public Task<IEnumerable<ContactModel>> GetAllContactAsync();
+        public Task<IEnumerable<ContactModel>> GetAllUserContactAsync(int CurentID);
         public Task<ContactModel> SaveContactAsync(ContactModel contact);
+        public Task<ContactModel> UpdateContactAsync(ContactModel contact);
         public Task<ContactModel> RemoveContactAsync(ContactModel contact);
 
     }

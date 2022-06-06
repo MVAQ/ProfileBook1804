@@ -4,6 +4,13 @@
              x:Class="ProfileBook1804.Views.MainListView">
 
     <StackLayout>
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            
+                       
         <Grid Padding="30, 50, 30, 0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -37,5 +44,10 @@
                                  Grid.Row="2"
                                  Grid.Column="1"/>
         </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
