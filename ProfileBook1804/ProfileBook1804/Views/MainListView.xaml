@@ -45,9 +45,9 @@
                                  Grid.Column="1"/>
         </Grid>
                         </ViewCell.View>
-                    </ViewCell>
+                    </ViewCell>              
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
-    </StackLayout>
+        </ListView>                             
+    </StackLayout>                                                                                                                                                                                    
 </ContentPage>

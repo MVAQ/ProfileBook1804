@@ -14,12 +14,6 @@ namespace ProfileBook1804.Services.Managers
     {
         ISettingsManager _settingsManager;
         IRepository _reposytory;
-        public ProfileManager(ISettingsManager settingsManager, IRepository reposytory)
-        {
-            _settingsManager = settingsManager;
-            _reposytory = reposytory;
-            
-        }
 
         private int _contactIdUser;
         public int ContactIdUser
@@ -28,7 +22,7 @@ namespace ProfileBook1804.Services.Managers
             set => SetProperty(ref _contactIdUser, value);
         }
         private string _contactName;
-        public string ContactName 
+        public string ContactName
         {
             get => _contactName;
             set => SetProperty(ref _contactName, value);
@@ -40,7 +34,7 @@ namespace ProfileBook1804.Services.Managers
             set => SetProperty(ref _contactNikName, value);
         }
         private string _contactDiscription;
-        public string ContactDiscription 
+        public string ContactDiscription
         {
             get => _contactDiscription;
             set => SetProperty(ref _contactDiscription, value);
@@ -50,17 +44,17 @@ namespace ProfileBook1804.Services.Managers
         public DateTime ContactCreateDateTime
         {
             get => _contactCreateDateTime;
-            set => SetProperty(ref _contactCreateDateTime,value);
+            set => SetProperty(ref _contactCreateDateTime, value);
         }
         public async Task<IEnumerable<ContactModel>> GetAllContactAsync()
         {
-
+            
             var CurentID = _settingsManager.UserId;
             var UserContactModels = await _reposytory.GetAllAsync<ContactModel>();
             var AllUserContactModel = from UserContact in UserContactModels
                                       where UserContact.ContactIdUser == CurentID
                                       select UserContact;
-            return  AllUserContactModel;
+            return AllUserContactModel;
         }
         public Task<IEnumerable<ContactModel>> GetAllUserContactAsync(int CurentID)
         {
@@ -69,12 +63,14 @@ namespace ProfileBook1804.Services.Managers
 
         public async Task<ContactModel> RemoveContactAsync(ContactModel contact)
         {
+           
             await _reposytory.DeleteAsync(contact);
             return contact;
         }
 
         public async Task<ContactModel> SaveContactAsync(ContactModel contact)
         {
+           
             var NewContact = contact;
             NewContact.ContactIdUser = _settingsManager.UserId;
             await _reposytory.InsertAsync(NewContact);
@@ -85,12 +81,11 @@ namespace ProfileBook1804.Services.Managers
 
         public async Task<ContactModel> UpdateContactAsync(ContactModel contact)
         {
-           
-                var NewContact = contact;
-                NewContact.ContactIdUser = _settingsManager.UserId;
-                await _reposytory.UpdateAsync(NewContact);
-                return NewContact;
-            
+            var NewContact = contact;
+            NewContact.ContactIdUser = _settingsManager.UserId;
+            await _reposytory.UpdateAsync(NewContact);
+            return NewContact;
+
         }
     }
 }

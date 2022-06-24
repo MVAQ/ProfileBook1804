@@ -20,9 +20,8 @@ namespace ProfileBook1804.ViewModels
         {
             _settingsManager = settingsManager;
             _profileManager = profileManager;
-           
         }
-
+        
 
 
     }
