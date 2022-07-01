@@ -21,7 +21,27 @@ namespace ProfileBook1804.ViewModels
             _settingsManager = settingsManager;
             _profileManager = profileManager;
         }
-        
+
+        private string _contactName;
+        public string ContactName
+        {
+            get => _contactName;
+            set => SetProperty(ref _contactName, value);
+        }
+        private string _contactNikName;
+        public string ContactNikName
+        {
+            get => _contactNikName;
+            set => SetProperty(ref _contactNikName, value);
+        }
+        private string _contactDiscription;
+        public string ContactDiscription
+        {
+            get => _contactDiscription;
+            set => SetProperty(ref _contactDiscription, value);
+        }
+
+
 
 
     }

@@ -19,7 +19,7 @@ namespace ProfileBook1804
         protected override void OnInitialized()
         {
             InitializeComponent();
-            NavigationService.NavigateAsync($"{nameof(ProfileBook1804.Views.AddContactView)}");
+            NavigationService.NavigateAsync($"{nameof(ProfileBook1804.Views.MainsListView)}");
         }
   
         
@@ -33,7 +33,7 @@ namespace ProfileBook1804
             containerRegistry.RegisterForNavigation<SingInView, SingInViewModel>();
             containerRegistry.RegisterForNavigation<SingUpView, SingUpViewModel>(); 
             containerRegistry.RegisterForNavigation<AddContactView, AddContactViewModel>();
-            containerRegistry.RegisterForNavigation<MainListView, MainListViewModel>();
+            containerRegistry.RegisterForNavigation<MainsListView, MainListViewModel>();
 
         }
         

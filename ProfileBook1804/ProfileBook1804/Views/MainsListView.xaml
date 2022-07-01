@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProfileBook1804.Views.MainsListView">
+
+    <StackLayout>
+
+        <Frame BackgroundColor="#2196F3" Padding="1" CornerRadius="0">
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+
+                <Button Text="B" Grid.Column="2"/>
+                <Button Text="S" Grid.Column="1"/>
+                <Label FontSize="20" 
+                       Text="Add Contact"
+                       Grid.Column="0"
+                       Padding="0"
+                       HorizontalOptions="Center"/>
+            </Grid>
+
+        </Frame>
+
+        <Grid Padding="30, 50, 30, 0">
+            <Button Text="" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Frame Grid.RowSpan="4" BackgroundColor="Aqua" CornerRadius="3">
+                <Image Source="" Grid.Column="0" />
+            </Frame>
+
+            <ListView ItemsSource="{Binding ConactList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+
+                                    <Label Text = "{Binding ContactName}" 
+                                    FontSize="13"
+                                    Grid.Row="0"
+                                    Grid.Column="1"/>
+
+                                    <Label Text="{Binding ContactNikName }"
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    FontSize="13"/>
+
+                                    <Label Text="{Binding ContactDiscription }"
+                                    FontSize="13"
+                                    Grid.Row="2"
+                                    Grid.Column="1"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+
+    </StackLayout>
+
+</ContentPage>

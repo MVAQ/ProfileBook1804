@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace ProfileBook1804.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class AddContactView : ContentPage
     {
         public AddContactView()

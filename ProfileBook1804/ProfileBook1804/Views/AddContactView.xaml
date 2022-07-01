@@ -18,8 +18,8 @@
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
 
-                <Button Text="B" Grid.Column="2"/>
-                <Button Text="S" Grid.Column="1"/>
+                <Button Text="Add" Grid.Column="2"/>
+                <Button Text="Set" Grid.Column="1"/>
                 <Label FontSize="20" 
                        Text="Add Contact"
                        Grid.Column="0"
@@ -29,42 +29,42 @@
 
         </Frame>
 
-        <Grid Padding="30, 50, 30, 0"><Button Text="" />
+        <Button Text="Add foto" Padding="20"/>
+        
+        <Grid Padding="30, 50, 30, 0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-
-
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Frame Grid.RowSpan="3">
-                <Image Source="ProfileBook1804\ProfileBook1804.Android\Resources\mipmap-hdpi\icon.png"
-                   Grid.Column="0"
-                   />
-            </Frame>
-            <Label Text="Sergio" 
+
+
+            <Entry Placeholder="ContactNikName" 
                    FontSize="13"
                    Grid.Row="0"
-                   Grid.Column="1"/>
+                   Grid.Column="0"/>
 
-            <Label Text="Sergey Prokopenko"
+            <Entry Placeholder="ContactName"
+                   Text=""
                    Grid.Row="1"
-                   Grid.Column="1"
+                   Grid.Column="0"   
                    FontSize="13"/>
 
-            <Label Text="9/05/1986 7:45PM"
+            <Entry Placeholder="ContactDescription"
+                   Text=""
                    FontSize="13"
                    Grid.Row="2"
-                   Grid.Column="1"/>
-
-            
+                   Grid.Column="0"
+                   Grid.RowSpan="4"
+                   Grid.ColumnSpan="1"/>
+           
         </Grid>
 
+        <Button Text="Add"/> 
     </StackLayout>
 
 </ContentPage>

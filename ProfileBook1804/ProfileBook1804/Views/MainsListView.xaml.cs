@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace ProfileBook1804.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainListView : ContentPage
+    public partial class MainsListView : ContentPage
     {
-        public MainListView()
+        public MainsListView()
         {
             InitializeComponent();
         }
